@@ -3,7 +3,7 @@ export default {
   state: {
     musicList: [],
     pageNum: 1,
-    pageSize: 10
+    pageSize: 15
   },
   mutations: {
     setMusicList (state, newMusicList) {
@@ -13,7 +13,7 @@ export default {
   actions: {
     getMusicList ({ commit, state }) {
       wx.request({
-        url: 'http://localhost:7001/api/v1/music',
+        url: 'http://1304ryh.natapp1.cc/api/v1/music',
         methods: 'GET',
         data: {
           pageNum: state.pageNum,
